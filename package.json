@@ -1,0 +1,11 @@
+{
+  "name": "npmo",
+  "version": "1.0.0",
+  "description": "Mortgage Bank is a React Mortgage calculator built in Material UI and ChartJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

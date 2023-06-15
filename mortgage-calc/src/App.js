@@ -4,7 +4,7 @@ import { Container } from "@mui/system";
 import Navbar from './Components/Navbar';
 import Result from "./Components/Result";
 import SliderSelect from "./Components/SliderSelect";
-import TenureSelect from "./Components/TenureSelect";
+
 
 
 function App() {
@@ -32,12 +32,7 @@ function App() {
             //Passing the data and setData state as props to the SliderSelect component
           />
 
-          <TenureSelect 
-            data={data} 
-            setData={setData} 
-            //Passing the data and setData state as props to the TenureSelect component
-          />
-
+          
           </Grid>
 
           <Grid item xs={12} md={6}>

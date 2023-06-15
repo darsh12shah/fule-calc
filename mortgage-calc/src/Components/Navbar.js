@@ -14,7 +14,7 @@ const Navbar = () => { //creating a simple Navabar to show the logo
         <Container maxWidth='xl'>
             <Toolbar>
                 <Typography variant="h5">
-                    Mortgage Bank
+                    Hydrogen Fuel Calculator
                 </Typography>
             </Toolbar>
         </Container>

@@ -7,41 +7,21 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Result = ({ data }) => {
   //Calculation of the different parameters to obtain their accurate percentages
-  const { homeValue, loanAmount, loanTerm, interestRate } = data;
+  const { homeValue, loanAmount, loanTerm, interestRate,downPayment } = data;
   const totalLoanMonths = loanTerm * 12;
   const interestPerMonth = interestRate / 100 / 12;
   const monthlyPayment = 
-  (loanAmount * interestPerMonth * 
-    (1 + interestPerMonth) ** totalLoanMonths) /
-  ((1 + interestPerMonth) ** totalLoanMonths - 1);
-  const totalInterestGenerated = monthlyPayment * totalLoanMonths - loanAmount;
+   downPayment*interestRate;
   
-  const pieChartData = { 
-    //stores all the data for our piechart including with different color types
-    labels: ["Principle", "Interest"],
-    datasets: [
-      {
-        label: "Ratio of Principle and Interest",
-        data: [homeValue, totalInterestGenerated],
-        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.5)"],
-        borderColor: ["rgba(255, 99, 132, 1), rgba(54, 162, 235, 0.8)"],
-        borderWidth: 1
-      },
-    ],
-  }
    return (
     <Stack  gap={3}>
     <Typography textAlign="center"variant="h5">
-      Monthly Payment: $ 
+      Toral Disitance:
       {
       monthlyPayment.toFixed(2)
       }
+      km
     </Typography>
-    <Stack direction="row" justifyContent="center">
-      <div>
-        <Pie data={pieChartData} />
-      </div>
-      </Stack>
       </Stack>
   );
 }

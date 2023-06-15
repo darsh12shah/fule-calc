@@ -21,7 +21,7 @@ const SliderComponent = ({ //Listing all the props that is needed to pass to our
         <Stack gap={1}>
         <Typography variant='subtitle2'>{label}</Typography>
         <Typography variant='h5'>
-        {unit} {amount}    
+         {amount} {unit}
         </Typography>   
     {/*This code displays the label, unit and amount*/}
     </Stack>
